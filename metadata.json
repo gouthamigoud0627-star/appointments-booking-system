@@ -1,0 +1,6 @@
+{
+  "name": "Schedora - Smart Appointment Booking & Business Directory",
+  "description": "Smart appointment booking and local business directory with real-time slot scheduling, customer and business portals, physical arrival tokens, and automated reminders.",
+  "requestFramePermissions": ["notifications", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

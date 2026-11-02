@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <defs>
+    <!-- Background Squircle Gradient -->
+    <linearGradient id="fav-bg" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stopColor="#2563EB" />
+      <stop offset="45%" stopColor="#4F46E5" />
+      <stop offset="85%" stopColor="#7C3AED" />
+      <stop offset="100%" stopColor="#8B5CF6" />
+    </linearGradient>
+
+    <!-- Inner Rim Stroke -->
+    <linearGradient id="fav-rim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="100%" stopColor="#FFFFFF" stop-opacity="0.05" />
+    </linearGradient>
+
+    <filter id="fav-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="#000000" floodOpacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- App Icon Squircle Background -->
+  <rect width="256" height="256" rx="64" fill="url(#fav-bg)" />
+  <rect x="1.5" y="1.5" width="253" height="253" rx="62.5" fill="none" stroke="url(#fav-rim)" stroke-width="3" />
+
+  <!-- Schedora Monogram in Pure White for Favicon Contrast -->
+  <g transform="translate(16, 12)" filter="url(#fav-shadow)">
+    <!-- Binder Peg Left -->
+    <rect x="76" y="8" width="24" height="42" rx="12" fill="#FFFFFF" />
+    <rect x="83" y="17" width="10" height="24" rx="5" fill="#3B82F6" />
+
+    <!-- Binder Peg Right -->
+    <rect x="160" y="8" width="24" height="42" rx="12" fill="#FFFFFF" />
+    <rect x="167" y="17" width="10" height="24" rx="5" fill="#3B82F6" />
+
+    <!-- Upper Calendar Body -->
+    <path
+      d="M 58 36
+         C 84 32, 176 32, 202 36
+         C 226 40, 238 56, 238 82
+         C 238 106, 218 126, 192 130
+         C 172 133, 138 133, 116 136
+         C 92 139, 78 149, 78 164
+         C 78 182, 98 198, 136 198
+         C 174 198, 202 186, 216 172
+         C 222 166, 232 166, 238 172
+         C 244 178, 244 188, 236 198
+         C 214 220, 176 234, 132 234
+         C 74 234, 46 204, 46 166
+         C 46 136, 66 116, 96 108
+         L 168 102
+         C 188 100, 198 92, 198 80
+         C 198 68, 186 60, 156 60
+         L 88 60
+         C 64 60, 50 72, 50 92
+         C 50 100, 42 106, 32 106
+         C 20 106, 12 98, 12 84
+         C 12 48, 32 38, 58 36 Z"
+      fill="#FFFFFF"
+    />
+
+    <!-- Lower Fold Ribbon in crisp light overlay -->
+    <path
+      d="M 116 138
+         C 138 135, 182 135, 208 135
+         C 234 135, 252 154, 252 178
+         C 252 208, 220 234, 164 234
+         C 122 234, 88 224, 60 206
+         C 52 201, 50 191, 58 184
+         C 66 177, 76 177, 84 183
+         C 106 196, 136 202, 162 202
+         C 192 202, 212 190, 212 174
+         C 212 162, 198 154, 178 154
+         L 122 154
+         C 108 154, 102 146, 116 138 Z"
+      fill="#F1F5F9"
+      opacity="0.9"
+    />
+
+    <!-- Central Checkmark -->
+    <path
+      d="M 112 114 L 136 138 L 186 86"
+      stroke="#FFFFFF"
+      stroke-width="22"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>

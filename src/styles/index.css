@@ -1,0 +1,249 @@
+/* Schedora Modern SaaS Design System Tokens & Base Theme */
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: #eef2ff;
+  --primary-dark: #3730a3;
+  --purple-accent: #7c3aed;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-muted: #f1f5f9;
+  --border: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Dark mode design tokens with soft dark surfaces (not pitch black) */
+html.dark,
+body.dark,
+[data-theme='dark'] {
+  --background: #0b0f19;
+  --surface: #111827;
+  --surface-muted: #1f2937;
+  --border: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --primary-light: #1e1b4b;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle background mesh & ambient glow for premium SaaS feel */
+.bg-mesh-pattern {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(59, 130, 246, 0.05) 0px, transparent 50%);
+}
+
+html.dark .bg-mesh-pattern,
+body.dark .bg-mesh-pattern,
+.dark .bg-mesh-pattern,
+[data-theme='dark'] .bg-mesh-pattern {
+  background-color: #0b0f19 !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.16) 0px, transparent 50%),
+    radial-gradient(at 100% 50%, rgba(124, 58, 237, 0.14) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(30, 58, 138, 0.14) 0px, transparent 50%) !important;
+}
+
+.bg-dark-mesh {
+  background-color: #0b0f19;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.18) 0px, transparent 50%),
+    radial-gradient(at 100% 50%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(30, 58, 138, 0.15) 0px, transparent 50%);
+}
+
+/* Radar & Pulse Animations */
+.location-radar-pulse {
+  animation: radar-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  position: relative;
+}
+
+@keyframes radar-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7), 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(99, 102, 241, 0), 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0), 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+    transform: scale(1);
+  }
+}
+
+.dora-pulse {
+  animation: dora-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes dora-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4), 0 0 30px rgba(124, 58, 237, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.7), 0 0 45px rgba(124, 58, 237, 0.4);
+  }
+}
+
+.business-card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -2px rgba(15, 23, 42, 0.03);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.business-card-shadow:hover {
+  box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.1), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
+  transform: translateY(-2px);
+}
+
+.distance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  header, footer, nav, button, .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* Schedora Official Brand Typography (matching uploaded image) */
+.font-brand {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  letter-spacing: -0.035em;
+}
+
+/* Surface enhancements for complete, seamless dark mode support across legacy/nested components */
+html.dark .bg-white:not(.no-dark-surface),
+body.dark .bg-white:not(.no-dark-surface),
+[data-theme='dark'] .bg-white:not(.no-dark-surface) {
+  background-color: #111827;
+}
+
+html.dark .bg-slate-50:not(.no-dark-surface),
+body.dark .bg-slate-50:not(.no-dark-surface),
+[data-theme='dark'] .bg-slate-50:not(.no-dark-surface) {
+  background-color: #0b0f19;
+}
+
+html.dark .bg-slate-100:not(.no-dark-surface),
+body.dark .bg-slate-100:not(.no-dark-surface),
+[data-theme='dark'] .bg-slate-100:not(.no-dark-surface) {
+  background-color: #1e293b;
+}
+
+html.dark .border-slate-200,
+html.dark .border-slate-100,
+body.dark .border-slate-200,
+body.dark .border-slate-100,
+[data-theme='dark'] .border-slate-200,
+[data-theme='dark'] .border-slate-100 {
+  border-color: #1f2937;
+}
+
+html.dark .border-slate-300,
+body.dark .border-slate-300,
+[data-theme='dark'] .border-slate-300 {
+  border-color: #374151;
+}
+
+html.dark .text-slate-900,
+body.dark .text-slate-900,
+[data-theme='dark'] .text-slate-900 {
+  color: #f9fafb;
+}
+
+html.dark .text-slate-800,
+body.dark .text-slate-800,
+[data-theme='dark'] .text-slate-800 {
+  color: #f3f4f6;
+}
+
+html.dark .text-slate-700,
+body.dark .text-slate-700,
+[data-theme='dark'] .text-slate-700 {
+  color: #e5e7eb;
+}
+
+html.dark .text-slate-600,
+body.dark .text-slate-600,
+[data-theme='dark'] .text-slate-600 {
+  color: #cbd5e1;
+}
+
+html.dark .text-slate-500,
+body.dark .text-slate-500,
+[data-theme='dark'] .text-slate-500 {
+  color: #9ca3af;
+}
+
+html.dark input:not([type='checkbox']):not([type='radio']),
+html.dark select,
+html.dark textarea,
+[data-theme='dark'] input:not([type='checkbox']):not([type='radio']),
+[data-theme='dark'] select,
+[data-theme='dark'] textarea {
+  color-scheme: dark;
+}
+

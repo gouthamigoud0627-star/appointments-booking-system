@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260" fill="none">
+  <defs>
+    <linearGradient id="mark-primary-grad" x1="18%" y1="12%" x2="82%" y2="88%">
+      <stop offset="0%" stopColor="#38BDF8" />
+      <stop offset="22%" stopColor="#3B82F6" />
+      <stop offset="58%" stopColor="#4F46E5" />
+      <stop offset="85%" stopColor="#7C3AED" />
+      <stop offset="100%" stopColor="#8B5CF6" />
+    </linearGradient>
+
+    <linearGradient id="mark-peg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#38BDF8" />
+      <stop offset="100%" stopColor="#3B82F6" />
+    </linearGradient>
+
+    <linearGradient id="mark-check-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#3B82F6" />
+      <stop offset="100%" stopColor="#4F46E5" />
+    </linearGradient>
+
+    <linearGradient id="mark-fold-grad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stopColor="#4338CA" />
+      <stop offset="35%" stopColor="#6D28D9" />
+      <stop offset="70%" stopColor="#7C3AED" />
+      <stop offset="100%" stopColor="#581C87" />
+    </linearGradient>
+
+    <linearGradient id="mark-bottom-grad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#7C3AED" />
+      <stop offset="40%" stopColor="#6366F1" />
+      <stop offset="100%" stopColor="#3B82F6" />
+    </linearGradient>
+
+    <linearGradient id="mark-crease-shadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#2E1065" stop-opacity="0.8" />
+      <stop offset="100%" stopColor="#4338CA" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="mark-drop-shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" floodColor="#1E1B4B" floodOpacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Schedora Calendar-S Monogram Mark -->
+  <g transform="translate(5, 5)" filter="url(#mark-drop-shadow)">
+    <!-- Binder Peg Left -->
+    <rect x="76" y="8" width="24" height="42" rx="12" fill="url(#mark-peg-grad)" />
+    <rect x="83" y="17" width="10" height="24" rx="5" fill="#FFFFFF" />
+
+    <!-- Binder Peg Right -->
+    <rect x="160" y="8" width="24" height="42" rx="12" fill="url(#mark-peg-grad)" />
+    <rect x="167" y="17" width="10" height="24" rx="5" fill="#FFFFFF" />
+
+    <!-- Main Upper Calendar Body and Loop -->
+    <path
+      d="M 58 36
+         C 84 32, 176 32, 202 36
+         C 226 40, 238 56, 238 82
+         C 238 106, 218 126, 192 130
+         C 172 133, 138 133, 116 136
+         C 92 139, 78 149, 78 164
+         C 78 182, 98 198, 136 198
+         C 174 198, 202 186, 216 172
+         C 222 166, 232 166, 238 172
+         C 244 178, 244 188, 236 198
+         C 214 220, 176 234, 132 234
+         C 74 234, 46 204, 46 166
+         C 46 136, 66 116, 96 108
+         L 168 102
+         C 188 100, 198 92, 198 80
+         C 198 68, 186 60, 156 60
+         L 88 60
+         C 64 60, 50 72, 50 92
+         C 50 100, 42 106, 32 106
+         C 20 106, 12 98, 12 84
+         C 12 48, 32 38, 58 36 Z"
+      fill="url(#mark-primary-grad)"
+    />
+
+    <!-- Signature 3D Fold Ribbon -->
+    <path
+      d="M 116 138
+         C 138 135, 182 135, 208 135
+         C 234 135, 252 154, 252 178
+         C 252 208, 220 234, 164 234
+         C 122 234, 88 224, 60 206
+         C 52 201, 50 191, 58 184
+         C 66 177, 76 177, 84 183
+         C 106 196, 136 202, 162 202
+         C 192 202, 212 190, 212 174
+         C 212 162, 198 154, 178 154
+         L 122 154
+         C 108 154, 102 146, 116 138 Z"
+      fill="url(#mark-fold-grad)"
+    />
+
+    <!-- Bottom Ribbon Front Sweep -->
+    <path
+      d="M 152 164
+         C 182 164, 208 172, 208 184
+         C 208 198, 186 212, 148 212
+         L 82 212
+         C 60 212, 46 200, 46 182
+         C 46 170, 54 164, 66 164
+         L 152 164 Z"
+      fill="url(#mark-bottom-grad)"
+      opacity="0.95"
+    />
+
+    <!-- Fold Crease Accent -->
+    <path
+      d="M 198 144
+         C 216 152, 226 166, 224 184
+         C 220 172, 208 160, 192 154
+         Z"
+      fill="url(#mark-crease-shadow)"
+    />
+
+    <!-- Central Bold Checkmark -->
+    <path
+      d="M 112 114 L 136 138 L 186 86"
+      stroke="url(#mark-check-grad)"
+      stroke-width="22"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>
